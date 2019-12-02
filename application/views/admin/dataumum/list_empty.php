@@ -189,44 +189,81 @@
 
          <!-- Begin Page Content -->
          <div class="container-fluid">
+             <?php
+                if ($this->session->flashdata('sukses')) {
+                    echo '<div class="alert alert-success">';
+                    echo $this->session->flashdata('sukses');
+                    echo '</div>';
+                }
 
+                //error validasi
+                echo validation_errors('<div class="alert alert-warning">', '</div>'); ?>
              <!-- Page Heading -->
              <h1 class="h3 mb-2 text-gray-800"><?php echo $title; ?></h1>
 
              <!-- DataTales Example -->
-             <div class="card shadow mb-4">
-                 <div class="card-header py-3">
-                     <!-- <h6 class="m-0 font-weight-bold text-primary"></h6> -->
+             <div class="row">
+                 <div class="col-md-3 mr-2">
+                     <div class="card shadow col-md-12">
+                         <div class="card-body">
+                             <?php echo form_open_multipart(base_url('dataumum/store_dataumum')); ?>
+                             <div class="form-group">
+                                 <input id="excel" type="file" name="excel" required>
+                             </div>
+                             <div class="from-group">
+                                 <input type="number" class="form-control" name="tahun1" placeholder="Tahun 1" value="<?php echo set_value('tahun1') ?>" required>
+                             </div>
+                             <div class="from-group">
+                                 <input type="number" class="form-control" name="tahun2" placeholder="Tahun 2" value="<?php echo set_value('tahun2') ?>" required>
+                             </div>
+                             <div class="from-group">
+                                 <input type="number" class="form-control" name="tahun3" placeholder="Tahun 3" value="<?php echo set_value('tahun3') ?>" required>
+                             </div>
+                             <div class="from-group">
+                                 <input type="number" class="form-control" name="tahun_target" placeholder="Tahun Target" value="<?php echo set_value('tahun_target') ?>" required>
+                             </div>
+                             <br>
+                             <div class="form-group">
+                                 <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
+                             </div>
+                             <?php echo form_close(); ?>
+                         </div>
+                     </div>
                  </div>
-                 <div class="card-body">
-                     <div class="table-responsive">
-                         <!-- <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0"> -->
-                         <table class="table table-bordered" width="100%" cellspacing="0">
-                             <thead>
-                                 <tr>
-                                     <th>#</th>
-                                     <th>Bulan</th>
-                                     <th>X1</th>
-                                     <th>X2</th>
-                                     <th>X3</th>
-                                     <th>Target</th>
-                                 </tr>
-                             </thead>
-                             <tbody>
-                                 <tr>
-                                     <td></td>
-                                     <td></td>
-                                     <td></td>
-                                     <td></td>
-                                     <td></td>
-                                     <td></td>
-                                 </tr>
-                             </tbody>
-                         </table>
+                 <div class="col-md-8">
+                     <div class="card shadow col-md-12">
+                         <div class="card-header py-3">
+                             <!-- <h6 class="m-0 font-weight-bold text-primary"></h6> -->
+                         </div>
+                         <div class="card-body">
+                             <div class="table-responsive">
+                                 <table class="table table-bordered" width="100%" cellspacing="0">
+                                     <thead>
+                                         <tr>
+                                             <th>#</th>
+                                             <th>Bulan</th>
+                                             <th>X1</th>
+                                             <th>X2</th>
+                                             <th>X3</th>
+                                             <th>Target</th>
+                                         </tr>
+                                     </thead>
+                                     <tbody>
+                                         <tr>
+                                             <td></td>
+                                             <td></td>
+                                             <td></td>
+                                             <td></td>
+                                             <td></td>
+                                             <td></td>
+                                         </tr>
+                                     </tbody>
+                                 </table>
+                             </div>
+                         </div>
                      </div>
                  </div>
              </div>
-
          </div>
          <!-- /.container-fluid -->
 

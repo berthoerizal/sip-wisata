@@ -189,7 +189,15 @@
 
          <!-- Begin Page Content -->
          <div class="container-fluid">
+             <?php
+                if ($this->session->flashdata('sukses')) {
+                    echo '<div class="alert alert-success">';
+                    echo $this->session->flashdata('sukses');
+                    echo '</div>';
+                }
 
+                //error validasi
+                echo validation_errors('<div class="alert alert-warning">', '</div>'); ?>
              <!-- Page Heading -->
              <h1 class="h3 mb-2 text-gray-800"><?php echo $title; ?></h1>
 

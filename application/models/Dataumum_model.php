@@ -17,10 +17,16 @@ class Dataumum_model extends CI_Model
     }
 
     //show data detail
-    public function detail($id)
+    public function detail($kode_data)
     {
-        $query = $this->db->get_where('tb_dataumum', array('id' => $id));
+        $query = $this->db->get_where('tb_dataumum', array('kode_data' => $kode_data));
         return $query->row();
+    }
+
+    //tambah data
+    public function add($data)
+    {
+        $this->db->insert('tb_dataumum', $data);
     }
 
     // public function listing_user()
@@ -36,11 +42,7 @@ class Dataumum_model extends CI_Model
     // 	return $query->row();
     // }
 
-    // //tambah data
-    // public function add($data)
-    // {
-    // 	$this->db->insert('user', $data);
-    // }
+
 
     // //edit data
     // public function update($data)
