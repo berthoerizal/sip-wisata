@@ -220,11 +220,11 @@
                                  <input type="number" class="form-control" name="tahun3" placeholder="Tahun 3" value="<?php echo set_value('tahun3') ?>" required>
                              </div>
                              <div class="from-group">
-                                 <input type="number" class="form-control" name="tahun_target" placeholder="Tahun Target" value="<?php echo set_value('tahun_target') ?>" required>
+                                 <input type="number" class="form-control" name="tahun4" placeholder="Tahun Target" value="<?php echo set_value('tahun4') ?>" required>
                              </div>
                              <br>
                              <div class="form-group">
-                                 <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
+                                 <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save"></i> Simpan</button>
                              </div>
                              <?php echo form_close(); ?>
                          </div>

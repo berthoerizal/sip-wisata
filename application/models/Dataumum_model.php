@@ -44,20 +44,18 @@ class Dataumum_model extends CI_Model
 
 
 
-    // //edit data
-    // public function update($data)
-    // {
-    // 	$this->db->where('username', $data['username']);
-    // 	$this->db->update('user', $data);
-    // }
+    //edit data
+    public function update($data)
+    {
+        $this->db->where('kode_data', $data['kode_data']);
+        $this->db->update('tb_dataumum', $data);
+    }
 
-    // //delete data
-    // public function delete($data)
-    // {
-    // 	$this->db->where('username', $data['username']);
-    // 	$this->db->delete('user', $data);
-    // }
-
+    //delete data
+    public function delete()
+    {
+        $this->db->empty_table('tb_dataumum');
+    }
 }
 
 /* End of file Pengguna_model.php */
