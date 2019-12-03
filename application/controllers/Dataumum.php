@@ -24,6 +24,7 @@ class Dataumum extends CI_Controller
         parent::__construct();
         $this->load->model('dataumum_model');
         $this->load->model('tahun_model');
+        $this->load->model('normalisasi_model');
         $this->load->library('PHPExcel/IOFactory');
     }
 
@@ -136,6 +137,7 @@ class Dataumum extends CI_Controller
                 'tahun4' => $this->input->post('tahun4')
             );
             $this->tahun_model->update($data_tahun);
+            $this->normalisasi_model->delete();
 
             $this->session->set_flashdata('sukses', 'Data berhasil diperbarui');
             redirect(base_url('dataumum'));
@@ -237,6 +239,7 @@ class Dataumum extends CI_Controller
                 'tahun4' => $this->input->post('tahun4')
             );
             $this->tahun_model->add($data_tahun);
+            $this->normalisasi_model->delete();
 
             $this->session->set_flashdata('sukses', 'Data berhasil ditambah');
             redirect(base_url('dataumum'));
@@ -247,6 +250,7 @@ class Dataumum extends CI_Controller
     {
         $this->dataumum_model->delete();
         $this->tahun_model->delete();
+        $this->normalisasi_model->delete();
         $this->session->set_flashdata('sukses', 'Data berhasil dihapus');
         redirect(base_url('dataumum'));
     }

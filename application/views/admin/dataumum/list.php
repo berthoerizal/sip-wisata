@@ -15,7 +15,7 @@
              <!-- Topbar Search -->
              <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                  <div class="input-group">
-                     <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                     <input type="hidden" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                      <div class="input-group-append">
                          <button class="btn btn-primary" type="button">
                              <i class="fas fa-search fa-sm"></i>
@@ -36,7 +36,7 @@
                      <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                          <form class="form-inline mr-auto w-100 navbar-search">
                              <div class="input-group">
-                                 <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                 <input type="hidden" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                  <div class="input-group-append">
                                      <button class="btn btn-primary" type="button">
                                          <i class="fas fa-search fa-sm"></i>
@@ -225,6 +225,8 @@
                              <br>
                              <div class="form-group">
                                  <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save"></i> Simpan</button>
+
+                                 <a href="dataumum/destroy_all" class="btn btn-dark btn-sm"><i class="fa fa-trash"></i> Hapus</a>
                              </div>
                              <?php echo form_close(); ?>
                          </div>
@@ -233,10 +235,66 @@
                  <div class="col-md-8">
                      <div class="card shadow col-md-12">
                          <div class="card-header py-3">
-                             <a href="dataumum/destroy_all" class="btn btn-dark btn-sm"><i class="fa fa-trash"></i> Hapus</a>
+                             <?php echo form_open(base_url('normalisasi/store_normalisasi')); ?>
+
+                             <input type="hidden" name="januari4" value="<?php echo $dataumum->januari4; ?>">
+                             <input type="hidden" name="februari4" value="<?php echo $dataumum->februari4; ?>">
+                             <input type="hidden" name="maret4" value="<?php echo $dataumum->maret4; ?>">
+                             <input type="hidden" name="april4" value="<?php echo $dataumum->april4; ?>">
+                             <input type="hidden" name="mei4" value="<?php echo $dataumum->mei4; ?>">
+                             <input type="hidden" name="juni4" value="<?php echo $dataumum->juni4; ?>">
+                             <input type="hidden" name="juli4" value="<?php echo $dataumum->juli4; ?>">
+                             <input type="hidden" name="agustus4" value="<?php echo $dataumum->agustus4; ?>">
+                             <input type="hidden" name="september4" value="<?php echo $dataumum->september4; ?>">
+                             <input type="hidden" name="oktober4" value="<?php echo $dataumum->oktober4; ?>">
+                             <input type="hidden" name="november4" value="<?php echo $dataumum->november4; ?>">
+                             <input type="hidden" name="desember4" value="<?php echo $dataumum->desember4; ?>">
+
+                             <input type="hidden" name="januari3" value="<?php echo $dataumum->januari3; ?>">
+                             <input type="hidden" name="februari3" value="<?php echo $dataumum->februari3; ?>">
+                             <input type="hidden" name="maret3" value="<?php echo $dataumum->maret3; ?>">
+                             <input type="hidden" name="april3" value="<?php echo $dataumum->april3; ?>">
+                             <input type="hidden" name="mei3" value="<?php echo $dataumum->mei3; ?>">
+                             <input type="hidden" name="juni3" value="<?php echo $dataumum->juni3; ?>">
+                             <input type="hidden" name="juli3" value="<?php echo $dataumum->juli3; ?>">
+                             <input type="hidden" name="agustus3" value="<?php echo $dataumum->agustus3; ?>">
+                             <input type="hidden" name="september3" value="<?php echo $dataumum->september3; ?>">
+                             <input type="hidden" name="oktober3" value="<?php echo $dataumum->oktober3; ?>">
+                             <input type="hidden" name="november3" value="<?php echo $dataumum->november3; ?>">
+                             <input type="hidden" name="desember3" value="<?php echo $dataumum->desember3; ?>">
+
+                             <input type="hidden" name="januari2" value="<?php echo $dataumum->januari2; ?>">
+                             <input type="hidden" name="februari2" value="<?php echo $dataumum->februari2; ?>">
+                             <input type="hidden" name="maret2" value="<?php echo $dataumum->maret2; ?>">
+                             <input type="hidden" name="april2" value="<?php echo $dataumum->april2; ?>">
+                             <input type="hidden" name="mei2" value="<?php echo $dataumum->mei2; ?>">
+                             <input type="hidden" name="juni2" value="<?php echo $dataumum->juni2; ?>">
+                             <input type="hidden" name="juli2" value="<?php echo $dataumum->juli2; ?>">
+                             <input type="hidden" name="agustus2" value="<?php echo $dataumum->agustus2; ?>">
+                             <input type="hidden" name="september2" value="<?php echo $dataumum->september2; ?>">
+                             <input type="hidden" name="oktober2" value="<?php echo $dataumum->oktober2; ?>">
+                             <input type="hidden" name="november2" value="<?php echo $dataumum->november2; ?>">
+                             <input type="hidden" name="desember2" value="<?php echo $dataumum->desember2; ?>">
+
+                             <input type="hidden" name="januari1" value="<?php echo $dataumum->januari1; ?>">
+                             <input type="hidden" name="februari1" value="<?php echo $dataumum->februari1; ?>">
+                             <input type="hidden" name="maret1" value="<?php echo $dataumum->maret1; ?>">
+                             <input type="hidden" name="april1" value="<?php echo $dataumum->april1; ?>">
+                             <input type="hidden" name="mei1" value="<?php echo $dataumum->mei1; ?>">
+                             <input type="hidden" name="juni1" value="<?php echo $dataumum->juni1; ?>">
+                             <input type="hidden" name="juli1" value="<?php echo $dataumum->juli1; ?>">
+                             <input type="hidden" name="agustus1" value="<?php echo $dataumum->agustus1; ?>">
+                             <input type="hidden" name="september1" value="<?php echo $dataumum->september1; ?>">
+                             <input type="hidden" name="oktober1" value="<?php echo $dataumum->oktober1; ?>">
+                             <input type="hidden" name="november1" value="<?php echo $dataumum->november1; ?>">
+                             <input type="hidden" name="desember1" value="<?php echo $dataumum->desember1; ?>">
+
+                             <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-fw fa-cog"></i> Normalisasi</button>
+                             <?php echo form_close(); ?>
                              <!-- <h6 class="m-0 font-weight-bold text-primary"></h6> -->
                          </div>
                          <div class="card-body">
+
                              <div class="table-responsive">
                                  <table class="table table-bordered" width="100%" cellspacing="0">
                                      <thead>
@@ -245,7 +303,7 @@
                                              <th>Bulan</th>
                                              <th><?php echo $tahun->tahun1; ?></th>
                                              <th><?php echo $tahun->tahun2; ?></th>
-                                             <th><?php echo $tahun->tahun3; ?></th>
+                                             <th><?php echo $tahun->tahun3 ?></th>
                                              <th><?php echo $tahun->tahun4; ?></th>
                                          </tr>
                                      </thead>
@@ -253,98 +311,98 @@
                                          <tr>
                                              <td>1</td>
                                              <td>Januari</td>
-                                             <td><?php echo $dataumum->januari1; ?></td>
-                                             <td><?php echo $dataumum->januari2; ?></td>
-                                             <td><?php echo $dataumum->januari3; ?></td>
                                              <td><?php echo $dataumum->januari4; ?></td>
+                                             <td><?php echo $dataumum->januari3; ?></td>
+                                             <td><?php echo $dataumum->januari2; ?></td>
+                                             <td><?php echo $dataumum->januari1; ?></td>
                                          </tr>
                                          <tr>
                                              <td>2</td>
                                              <td>Februari</td>
-                                             <td><?php echo $dataumum->februari1; ?> </td>
-                                             <td><?php echo $dataumum->februari2; ?></td>
+                                             <td><?php echo $dataumum->februari4; ?> </td>
                                              <td><?php echo $dataumum->februari3; ?></td>
-                                             <td><?php echo $dataumum->februari4; ?></td>
+                                             <td><?php echo $dataumum->februari2; ?></td>
+                                             <td><?php echo $dataumum->februari1; ?></td>
                                          </tr>
                                          <tr>
                                              <td>3</td>
                                              <td>Maret</td>
-                                             <td><?php echo $dataumum->maret1; ?> </td>
-                                             <td><?php echo $dataumum->maret2; ?></td>
+                                             <td><?php echo $dataumum->maret4; ?> </td>
                                              <td><?php echo $dataumum->maret3; ?></td>
-                                             <td><?php echo $dataumum->maret4; ?></td>
+                                             <td><?php echo $dataumum->maret2; ?></td>
+                                             <td><?php echo $dataumum->maret1; ?></td>
                                          </tr>
                                          <tr>
                                              <td>4</td>
                                              <td>April</td>
-                                             <td><?php echo $dataumum->april1; ?> </td>
-                                             <td><?php echo $dataumum->april2; ?></td>
+                                             <td><?php echo $dataumum->april4; ?> </td>
                                              <td><?php echo $dataumum->april3; ?></td>
-                                             <td><?php echo $dataumum->april4; ?></td>
+                                             <td><?php echo $dataumum->april2; ?></td>
+                                             <td><?php echo $dataumum->april1; ?></td>
                                          </tr>
                                          <tr>
                                              <td>5</td>
                                              <td>Mei</td>
-                                             <td><?php echo $dataumum->mei1; ?> </td>
-                                             <td><?php echo $dataumum->mei2; ?></td>
+                                             <td><?php echo $dataumum->mei4; ?> </td>
                                              <td><?php echo $dataumum->mei3; ?></td>
-                                             <td><?php echo $dataumum->mei4; ?></td>
+                                             <td><?php echo $dataumum->mei2; ?></td>
+                                             <td><?php echo $dataumum->mei1; ?></td>
                                          </tr>
                                          <tr>
                                              <td>6</td>
                                              <td>Juni</td>
-                                             <td><?php echo $dataumum->juni1; ?> </td>
-                                             <td><?php echo $dataumum->juni2; ?></td>
+                                             <td><?php echo $dataumum->juni4; ?> </td>
                                              <td><?php echo $dataumum->juni3; ?></td>
-                                             <td><?php echo $dataumum->juni4; ?></td>
+                                             <td><?php echo $dataumum->juni2; ?></td>
+                                             <td><?php echo $dataumum->juni1; ?></td>
                                          </tr>
                                          <tr>
                                              <td>7</td>
                                              <td>Juli</td>
-                                             <td><?php echo $dataumum->juli1; ?> </td>
-                                             <td><?php echo $dataumum->juli2; ?></td>
+                                             <td><?php echo $dataumum->juli4; ?> </td>
                                              <td><?php echo $dataumum->juli3; ?></td>
-                                             <td><?php echo $dataumum->juli4; ?></td>
+                                             <td><?php echo $dataumum->juli2; ?></td>
+                                             <td><?php echo $dataumum->juli1; ?></td>
                                          </tr>
                                          <tr>
                                              <td>8</td>
                                              <td>Agustus</td>
-                                             <td><?php echo $dataumum->agustus1; ?> </td>
-                                             <td><?php echo $dataumum->agustus2; ?></td>
+                                             <td><?php echo $dataumum->agustus4; ?> </td>
                                              <td><?php echo $dataumum->agustus3; ?></td>
-                                             <td><?php echo $dataumum->agustus4; ?></td>
+                                             <td><?php echo $dataumum->agustus2; ?></td>
+                                             <td><?php echo $dataumum->agustus1; ?></td>
                                          </tr>
                                          <tr>
                                              <td>9</td>
                                              <td>September</td>
-                                             <td><?php echo $dataumum->september1; ?> </td>
-                                             <td><?php echo $dataumum->september2; ?></td>
+                                             <td><?php echo $dataumum->september4; ?> </td>
                                              <td><?php echo $dataumum->september3; ?></td>
-                                             <td><?php echo $dataumum->september4; ?></td>
+                                             <td><?php echo $dataumum->september2; ?></td>
+                                             <td><?php echo $dataumum->september1; ?></td>
                                          </tr>
                                          <tr>
                                              <td>10</td>
                                              <td>Oktober</td>
-                                             <td><?php echo $dataumum->oktober1; ?> </td>
-                                             <td><?php echo $dataumum->oktober2; ?></td>
+                                             <td><?php echo $dataumum->oktober4; ?> </td>
                                              <td><?php echo $dataumum->oktober3; ?></td>
-                                             <td><?php echo $dataumum->oktober4; ?></td>
+                                             <td><?php echo $dataumum->oktober2; ?></td>
+                                             <td><?php echo $dataumum->oktober1; ?></td>
                                          </tr>
                                          <tr>
                                              <td>11</td>
                                              <td>November</td>
-                                             <td><?php echo $dataumum->november1; ?> </td>
-                                             <td><?php echo $dataumum->november2; ?></td>
+                                             <td><?php echo $dataumum->november4; ?> </td>
                                              <td><?php echo $dataumum->november3; ?></td>
-                                             <td><?php echo $dataumum->november4; ?></td>
+                                             <td><?php echo $dataumum->november2; ?></td>
+                                             <td><?php echo $dataumum->november1; ?></td>
                                          </tr>
                                          <tr>
                                              <td>12</td>
                                              <td>Desember</td>
-                                             <td><?php echo $dataumum->desember1; ?> </td>
-                                             <td><?php echo $dataumum->desember2; ?></td>
+                                             <td><?php echo $dataumum->desember4; ?> </td>
                                              <td><?php echo $dataumum->desember3; ?></td>
-                                             <td><?php echo $dataumum->desember4; ?></td>
+                                             <td><?php echo $dataumum->desember2; ?></td>
+                                             <td><?php echo $dataumum->desember1; ?></td>
                                          </tr>
                                      </tbody>
                                  </table>
